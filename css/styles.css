@@ -1,0 +1,420 @@
+:root {
+  --font-family-primary: Roboto, sans-serif;
+  --font-family-secondary: Raleway, sans-serif;
+  --text-light-theme-primary-color: #212121;
+  --text-light-theme-secondary-color: #757575;
+  --text-dark-theme-primary-color: #ffffff;
+  --text-footer-contact-color: rgba(255, 255, 255, 0.6);
+  --background-primary-color: #2f303a;
+  --background-secondary-color: #ffffff;
+  --background-menu-color: #f5f4fa;
+  --logo-accent-color: #2196f3;
+  --logo-secondary-color: #000000;
+  --header-line-color: #f5f4fa;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--text-light-theme-primary-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: var(--background-secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  border: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* ==================== COMPONENTS ==================== */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* ==================== /COMPONENTS ==================== */
+
+/* =========== Студія-сторінка - Header ============= */
+
+.link.menu-link.current {
+  color: var(--logo-accent-color);
+}
+
+.header-logo {
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--logo-secondary-color);
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header-logo-part {
+  color: var(--logo-accent-color);
+}
+
+.menu-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: inherit;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--logo-accent-color);
+}
+
+.header-contact-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--text-light-theme-secondary-color);
+}
+
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: var(--logo-accent-color);
+}
+/*====== Header-Flex == */
+.header {
+  background-color: var(--background-secondary-color);
+  border-bottom: 1px solid var(--header-line-color);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.header-contact-item {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  margin-left: auto;
+}
+/* =========== /Студія-сторінка - Header ============= */
+
+/* =========== Студія-сторінка - Hero ============= */
+
+.studio-open-modal-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--logo-accent-color);
+  color: var(--text-dark-theme-primary-color);
+  cursor: pointer;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.studio-open-modal-btn:hover,
+.studio-open-modal-btn:focus {
+  background-color: var(--text-dark-theme-primary-color);
+  color: var(--logo-accent-color);
+}
+
+.studio-hero {
+  background: var(--background-primary-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.studio-hero-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.studio-hero-headline {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dark-theme-primary-color);
+  width: 696px;
+  margin-bottom: 30px;
+}
+/* =========== /Студія-сторінка - Hero ============= */
+
+/* =========== Студія-сторінка - Advantages ============= */
+
+.advantages {
+  background-color: var(--background-secondary-color);
+}
+
+.advantages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-secondary-headline {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.studio-advantage-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantage-item {
+  width: 270px;
+}
+
+.studio-advantage-headline {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.studio-advantage-text {
+  line-height: 1.71;
+  color: var(--text-light-theme-secondary-color);
+}
+/* =========== /Студія-сторінка - Advantages ============= */
+
+/* =========== Студія-сторінка - Activities ============= */
+.activities {
+  background-color: var(--background-secondary-color);
+  padding-top: 0;
+}
+
+.activities-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-activity-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activities-headline {
+  margin-bottom: 50px;
+}
+
+/* =========== /Студія-сторінка - Activities ============= */
+
+/* =========== Студія-сторінка - Team ============= */
+.team {
+  background-color: var(--background-menu-color);
+}
+
+.team-headline {
+  margin-bottom: 50px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-item {
+  background-color: var(--background-secondary-color);
+}
+
+.team-img {
+  margin-bottom: 30px;
+}
+
+.studio-team-names-headline {
+  margin-bottom: 10px;
+}
+
+.studio-team-positions-text {
+  margin-bottom: 30px;
+}
+
+.studio-team-names-headline {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.studio-team-positions-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--text-light-theme-secondary-color);
+}
+/* =========== /Студія-сторінка - Team ============= */
+
+/* =========== Студія-сторінка - Footer ============= */
+
+.footer-logo {
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--text-dark-theme-primary-color);
+}
+
+.footer-logo-part {
+  color: var(--logo-accent-color);
+}
+
+.footer {
+  background: var(--background-primary-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-contact-link {
+  font-style: normal;
+  line-height: 1.71;
+  color: var(--text-footer-contact-color);
+}
+
+.footer-contact-link-special-color {
+  color: var(--text-dark-theme-primary-color);
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: var(--logo-accent-color);
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer-contacts {
+  height: 81px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* =========== /Студія-сторінка ============= */
+
+/* ========== Портфоліо-сторінка - =============*/
+
+.portfolio-hero {
+  background-color: var(--background-secondary-color);
+}
+
+.portfolio-menu {
+  display: flex;
+  justify-content: center;
+  column-gap: 8px;
+  margin-bottom: 50px;
+}
+
+.portfolio-menu-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  background-color: var(--background-menu-color);
+  color: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 22px;
+}
+
+.first-btn {
+  padding: 6px 25px;
+}
+
+.portfolio-menu-btn:hover,
+.portfolio-menu-btn:focus {
+  background-color: var(--logo-accent-color);
+  color: var(--text-dark-theme-primary-color);
+}
+
+.porfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-item {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 24px;
+}
+
+.portfolio-project-headline {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.portfolio-project-text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--text-light-theme-secondary-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
