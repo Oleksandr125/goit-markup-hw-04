@@ -11,6 +11,8 @@
   --logo-accent-color: #2196f3;
   --logo-secondary-color: #000000;
   --header-line-color: #f5f4fa;
+  --icon-color: #afb1b8;
+  --icon-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -62,6 +64,10 @@ button {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.studio-secondary-headline {
+  margin-bottom: 50px;
+}
 /* ==================== /COMPONENTS ==================== */
 
 /* =========== Студія-сторінка - Header ============= */
@@ -104,10 +110,6 @@ button {
   color: var(--text-light-theme-secondary-color);
 }
 
-.header-contact-link:hover,
-.header-contact-link:focus {
-  color: var(--logo-accent-color);
-}
 /*====== Header-Flex == */
 .header {
   background-color: var(--background-secondary-color);
@@ -130,11 +132,31 @@ button {
   column-gap: 50px;
 }
 
-.header-contact-item {
+.header-contact-list {
   display: flex;
   align-items: center;
   column-gap: 50px;
   margin-left: auto;
+}
+
+.header-contact-link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.header-contact-icone {
+  fill: var(--text-light-theme-secondary-color);
+}
+
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: var(--logo-accent-color);
+}
+
+.header-contact-link:hover .header-contact-icone,
+.header-contact-link:focus .header-contact-icone {
+  fill: var(--logo-accent-color);
 }
 /* =========== /Студія-сторінка - Header ============= */
 
@@ -165,6 +187,12 @@ button {
 
 .studio-hero {
   background: var(--background-primary-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-hero.jpg);
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -227,6 +255,17 @@ button {
   line-height: 1.71;
   color: var(--text-light-theme-secondary-color);
 }
+
+.advantage-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-menu-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 /* =========== /Студія-сторінка - Advantages ============= */
 
 /* =========== Студія-сторінка - Activities ============= */
@@ -245,10 +284,6 @@ button {
   justify-content: space-between;
 }
 
-.activities-headline {
-  margin-bottom: 50px;
-}
-
 /* =========== /Студія-сторінка - Activities ============= */
 
 /* =========== Студія-сторінка - Team ============= */
@@ -256,8 +291,11 @@ button {
   background-color: var(--background-menu-color);
 }
 
-.team-headline {
-  margin-bottom: 50px;
+.team-wrapper {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 }
 
 .team-members {
@@ -277,10 +315,6 @@ button {
   margin-bottom: 10px;
 }
 
-.studio-team-positions-text {
-  margin-bottom: 30px;
-}
-
 .studio-team-names-headline {
   font-weight: 500;
   font-size: 16px;
@@ -293,9 +327,78 @@ button {
   line-height: 1.19;
   text-align: center;
   color: var(--text-light-theme-secondary-color);
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-secondary-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--logo-accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--text-dark-theme-primary-color);
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
 }
 /* =========== /Студія-сторінка - Team ============= */
+/* =========== /Студія-сторінка - Clients ============= */
+.clients {
+  background-color: var(--background-secondary-color);
+}
 
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.client-icon-logo {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--logo-accent-color);
+}
+
+.client-link:hover .client-icon-logo,
+.client-link:focus .client-icon-logo {
+  fill: var(--logo-accent-color);
+}
+
+/* =========== /Студія-сторінка - Clients ============= */
 /* =========== Студія-сторінка - Footer ============= */
 
 .footer-logo {
@@ -342,6 +445,56 @@ button {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.footer-social-text {
+  color: var(--text-dark-theme-primary-color);
+}
+
+.footer-social-list {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 30px;
+}
+
+.footer-social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--icon-bg-color);
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: var(--logo-accent-color);
+}
+
+.footer-social-list-link:hover .social-list-icon,
+.footer-social-list-link:focus .social-list-icon {
+  fill: var(--logo-accent-color);
+}
+
+.footer-social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-dark-theme-primary-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  column-gap: 70px;
+}
+
+.footer-social-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 /* =========== /Студія-сторінка ============= */
 
 /* ========== Портфоліо-сторінка - =============*/
@@ -378,12 +531,19 @@ button {
 .portfolio-menu-btn:focus {
   background-color: var(--logo-accent-color);
   color: var(--text-dark-theme-primary-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .porfolio-projects {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.portfolio-shadow:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-item {
