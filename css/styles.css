@@ -186,6 +186,7 @@ button {
 }
 
 .studio-hero {
+  max-width: 1600px;
   background: var(--background-primary-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -193,6 +194,8 @@ button {
     ),
     url(../images/bg-hero.jpg);
   background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -292,9 +295,7 @@ button {
 }
 
 .team-wrapper {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -305,10 +306,9 @@ button {
 
 .team-item {
   background-color: var(--background-secondary-color);
-}
-
-.team-img {
-  margin-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .studio-team-names-headline {
@@ -541,12 +541,18 @@ button {
   gap: 30px;
 }
 
-.portfolio-shadow:hover {
+.portfolio-project-link {
+  display: block;
+  text-decoration: none;
+}
+
+.portfolio-project-link:hover,
+.portfolio-project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-item {
+.portfolio-project-wrapper {
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px 24px;
@@ -558,6 +564,7 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  color: var(--text-light-theme-primary-color);
 }
 
 .portfolio-project-text {
